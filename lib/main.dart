@@ -115,15 +115,15 @@ const String defaultVpnUsername = "vpn";
 const String defaultVpnPassword = "vpn";
 
 String get config => """
-
+data-ciphers AES-128-CBC
+data-ciphers-fallback AES-128-CBC
 dev tun
 proto tcp
 remote 219.100.37.113 443
 ;http-proxy-retry
 ;http-proxy [proxy server] [proxy port]
 cipher AES-128-CBC
-data-ciphers AES-128-CBC
-data-ciphers-fallback AES-128-CBC
+
 auth SHA1
 resolv-retry infinite
 nobind
